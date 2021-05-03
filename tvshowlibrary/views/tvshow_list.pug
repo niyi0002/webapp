@@ -1,0 +1,31 @@
+extends layout
+
+block content
+  h1= title
+
+  ul
+    each tvshow in tvshow_list
+      li
+        a(href=tvshow.url)  
+                  #tomb.movie_card
+                    .info_section
+                      .movie_header  
+                         img.locandina(src= '/images/poster.jpg')
+                         |       
+                         h1 #{tvshow.title}
+                         |       
+                         p #[strong Summary: ] #{tvshow.summary}
+                         p #[strong Director:] #{tvshow.director}
+                         p #[strong Genre: ]
+                          each val, index in tvshow.genre
+                            a(href=val.url) #{val.name}
+                              if index < tvshow.genre.length - 1
+                               |,
+                    
+           
+
+    
+    else
+      li There are no shows.
+
+   

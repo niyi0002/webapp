@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1 Title: #{tvshow.title}
+ 
+  p #[strong Director:]#{tvshow.director}
+  p #[strong Summary:] #{tvshow.summary}
+  p #[strong Genre:]
+    each val, index in tvshow.genre
+      a(href=val.url) #{val.name}
+      if index < tvshow.genre.length - 1
+        |,
+
+  div(style='margin-left:20px;margin-top:20px')
+
