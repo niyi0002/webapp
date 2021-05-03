@@ -10,7 +10,11 @@ var genre_controller = require('../controllers/genreController');
 
 // GET catalog home page.
 router.get('/', tvshowController.index);
+// GET request for creating a tvshow
+router.get('/tvshow/create', tvshowController.tvshow_create_get);
 
+// POST request for creating tvshow.
+router.post('/tvshow/create', tvshowController.tvshow_create_post);
 
 // GET request for one Show.
 router.get('/tvshow/:id', tvshowController.tvshow_detail);
@@ -18,24 +22,20 @@ router.get('/tvshow/:id', tvshowController.tvshow_detail);
 // GET request for list of all Tv Showws.
 router.get('/tvshows', tvshowController.tvshow_list);
 
-// GET request for creating a tvshow
-router.get('/tvshow/create', tvshowController.tvshow_create_get);
 
-// POST request for creating tvshow.
-router.post('/tvshow/create', tvshowController.tvshow_create_post);
 /// GENRE ROUTES ///
 
-
-// GET request for one Genre.
-router.get('/genre/:id', genre_controller.genre_detail);
-
-// GET request for list of all Genre.
-router.get('/genres', genre_controller.genre_list);
 
 // GET request for creating a Genre. NOTE This must come before route that displays Genre (uses id).
 router.get('/genre/create', genre_controller.genre_create_get);
 
 // POST request for creating Genre.
 router.post('/genre/create', genre_controller.genre_create_post);
+// GET request for one Genre.
+router.get('/genre/:id', genre_controller.genre_detail);
+
+// GET request for list of all Genre.
+router.get('/genres', genre_controller.genre_list);
+
 
 module.exports = router;
