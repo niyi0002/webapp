@@ -13,6 +13,8 @@
   "dependencies": {
     "@hapi/joi": "^17.1.1",
     "async": "^3.2.0",
+    "bcrpyt": "^2.0.0",
+    "bcrypt": "^5.0.1",
     "bcrypt-nodejs": "^0.0.3",
     "connect-flash": "^0.1.1",
     "cookie-parser": "~1.4.4",
@@ -28,7 +30,7 @@
     "node-pre-gyp": "^0.17.0",
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
-    "pug": "^2.0.4"
+    "pug": "^3.0.2"
   },
   "devDependencies": {
     "@types/bcrypt-nodejs": "^0.0.31",
