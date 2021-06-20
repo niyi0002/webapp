@@ -4,6 +4,8 @@ var router = express.Router();
 // Require controller modules.
 var tvshowController = require('../controllers/tvshowController');
 var genre_controller = require('../controllers/genreController');
+var user_controller = require('../controllers/userController');
+const {ensureAuthenticated} = require("../config/auth.js");
 
 
 /// TVSHOW ROUTES ///
@@ -36,6 +38,19 @@ router.get('/genre/:id', genre_controller.genre_detail);
 
 // GET request for list of all Genre.
 router.get('/genres', genre_controller.genre_list);
+
+//SIGN UP ROUTE
+router.get('/user/signup', user_controller.user_create_get);
+
+router.post('/user/signup',  user_controller.user_create_post);
+
+//LOGIN ROUTE
+
+router.get('/user/login', user_controller.user_login_get);
+router.post('/user/login', user_controller.user_login);
+
+router.get('/user/login/profile', ensureAuthenticated, user_controller.user_profile);
+router.get('/user/logout', user_controller.logout);
 
 
 module.exports = router;
