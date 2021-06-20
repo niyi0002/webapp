@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-var bcrypt = require('bcrypt');
+var bcrypt = require('bcrypt-nodejs');
 const jwt = require('jsonwebtoken');
 const SALT = 10;
 var Schema = mongoose.Schema;
