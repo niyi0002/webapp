@@ -1,0 +1,19 @@
+extends layout
+
+block content
+ .col-md-6.main
+   h1 #{title}
+  
+    form(method='POST' action='')
+      div.form-group
+        label(for='email') 
+        input#email.form-control(type='text', placeholder='Email' name='email' value=(undefined===user ? '' : user.email)) 
+      div.form-group
+        label(for='password') 
+        input#password.form-control(type='password', placeholder='Password' name='password' value=(undefined===user ? '' : user.password))
+      button.btn.btn-primary(type='submit') Login
+
+    if errors
+      ul
+        for error in errors
+          li!= error.msg
