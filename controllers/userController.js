@@ -1,7 +1,7 @@
 var User = require('../models/user');
 var async = require('async');
 var jwt = require('jsonwebtoken');
-var bcrypt = require('bcrypt-nodejs');
+var bcrypt = require('bcrypt');
 require('dotenv').config();
 const Joi = require("@hapi/joi");
 // validation
@@ -31,8 +31,8 @@ exports.user_create_post = async (req, res) => {
     return res.status(400).json({ error: "Email already exists" });
 
 // hash the password
-const salt = await bcrypt.genSalt(10);
-const password = await bcrypt.hash(req.body.password, salt);
+const salt = bcrypt.genSalt(10);
+const password = bcrypt.hash(req.body.password, salt);
 
 const user = new User({
   name: req.body.name,
