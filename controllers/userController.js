@@ -1,6 +1,6 @@
 var User = require('../models/user');
 var async = require('async');
-var bcrypt = require('bcryptjs');
+var bcrypt = require('bcrypt');
 require('dotenv').config();
 const Joi = require("@hapi/joi");
 // validation
