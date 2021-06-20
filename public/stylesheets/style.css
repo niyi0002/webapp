@@ -47,7 +47,25 @@ html, body{
   font-size: 14px;
   font-weight: 400;
 }
-
+input{
+  font-family: 'Helvetica', serif;
+  width: 100%;
+  font-size: 20px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: none;
+  border-bottom: 2px solid #767474;
+}
+button[type=submit] {
+  font-family: 'Helvetica', serif;
+  width: 50%;
+  background-color: #767474;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  margin: 4px 2px;
+  border-radius: 10px;
+}
 .link{
   display: block;
   text-align: center;
@@ -55,6 +73,56 @@ html, body{
   text-decoration: none;
   padding: 10px;
 }
+
+label{
+  font-family: 'Montserrat', helvetica, arial, sans-serif;
+  font-size: 14px;
+}
+.main{
+  padding:50px;
+  position: relative;
+  font-family: 'Helvetica', serif;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: all 0.4s;
+  box-shadow: 0px 0px 120px -25px rgba(100, 149, 237, 0.5);
+  margin-left: 250px;  
+}
+.main h1{
+  font-size: 40px;
+  text-align:center;
+  font-family: 'Helvetica', serif;
+    
+}
+.star-ratings {
+  unicode-bidi: bidi-override;
+  color: #ccc;
+  font-size: 64px;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+ .fill-ratings {
+    color: #e7711b;
+    padding: 0;
+    position: absolute;
+    z-index: 1;
+    display: block;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+ }
+  
+    span {
+      display: inline-block;
+    }
+  
+  .empty-ratings {
+    padding: 0;
+    display: block;
+    z-index: 0;
+  }
+
 
 .movie_card{
   position: relative;
@@ -100,7 +168,7 @@ html, body{
       }
       .movie_card:hover{
         transform: scale(1.02);
-        box-shadow: 0px 0px 80px -25px  rgba(94, 244, 255, 0.5);
+        box-shadow: 0px 0px 80px -25px  rgba(107, 0, 0, 0.5);
         transition: all 0.4s;
       }
       p{
