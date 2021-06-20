@@ -1,7 +1,7 @@
 var User = require('../models/user');
 var async = require('async');
 var jwt = require('jsonwebtoken');
-var bcrypt = require('bcrypt');
+var bcrypt = require('bcrypt-nodejs');
 require('dotenv').config();
 const Joi = require("@hapi/joi");
 // validation
