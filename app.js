@@ -3,12 +3,29 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-
-
+require('dotenv').config();
+const passport = require("passport");
+const flash = require('connect-flash');
+var session = require('express-session');
 var indexRouter = require('./routes/index');
 var catalogRouter = require('./routes/catalog');  //Import routes for "catalog" area of site
 var app = express();
-
+app.use(session({
+  secret : 'secret',
+  resave : true,
+  saveUninitialized : true,
+  cookies :{ secure: false },
+ }));
+ app.use(flash());
+app.use((req,res,next)=> {
+  res.locals.success_msg = req.flash('success_msg');
+  res.locals.error_msg = req.flash('error_msg');
+  res.locals.error  = req.flash('error');
+next();
+})
+ app.use(passport.initialize());
+ app.use(passport.session());
+ require("./config/passport")(passport);
 //Set up mongoose connection
 var mongoose = require('mongoose');
 var dev_db_url = 'mongodb+srv://nilay:coolpassword@cluster0.lv52f.mongodb.net/tvshow_library?retryWrites=true&w=majority';
