@@ -30,13 +30,14 @@ exports.user_create_post = async (req, res) => {
     return res.status(400).json({ error: "Email already exists" });
 
 // hash the password
-const salt = bcrypt.genSalt(10);
-const password = bcrypt.hash(req.body.password, salt);
+const saltRounds = 10;
+const salt = await bcrypt.genSalt(saltRounds);
+const hashedpassword = await bcrypt.hash(req.body.password, salt);
 
 const user = new User({
   name: req.body.name,
   email: req.body.email,
-  password,
+  password: hashedpassword,
 });
 
 try {
