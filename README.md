@@ -20,12 +20,24 @@ To start with we used express application generator. This helped us with creatin
 
 ## Dependencies
 
+    "@hapi/joi": "^17.1.1",
     "async": "^3.2.0",
+    "bcrpyt": "^2.0.0",
+    "bcryptjs": "^2.4.3",
+    "connect-flash": "^0.1.1",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
+    "dotenv": "^10.0.0",
     "express": "~4.16.1",
+    "express-session": "^1.17.2",
     "express-validator": "^6.10.1",
     "http-errors": "~1.6.3",
+    "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.12.7",
     "morgan": "~1.9.1",
-    "pug": "2.0.0-beta11"
+    "node-pre-gyp": "^0.17.0",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "pug": "^3.0.2",
+    "save": "^2.4.0",
+    "touch": "^3.1.0"
