@@ -2,18 +2,22 @@ extends layout
 
 block content
   h1= title
-
+  img(src="/images/background.jpg" )
   ul
     each tvshow in tvshow_list
       li
         a(href=tvshow.url)  
                   #tomb.movie_card
                     .info_section
-                      .movie_header  
-                         img.locandina(src= '/images/poster.jpg')
-                         |       
+                      .movie_header        
                          h1 #{tvshow.title}
                          |       
+                         .star-rating(data-current='5')
+                            span &starf;
+                            span &starf;
+                            span &starf;
+                            span &starf;
+                            span &starf;
                          p #[strong Summary: ] #{tvshow.summary}
                          p #[strong Director:] #{tvshow.director}
                          p #[strong Genre: ]
