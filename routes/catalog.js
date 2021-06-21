@@ -16,13 +16,13 @@ router.get('/', tvshowController.index);
 router.get('/tvshow/create', tvshowController.tvshow_create_get);
 
 // POST request for creating tvshow.
-router.post('/tvshow/create', tvshowController.tvshow_create_post);
+router.post('/tvshow/create', ensureAuthenticated, tvshowController.tvshow_create_post);
 
 // GET request for one Show.
 router.get('/tvshow/:id', tvshowController.tvshow_detail);
 
 // GET request for list of all Tv Showws.
-router.get('/tvshows', tvshowController.tvshow_list);
+router.get('/tvshows',tvshowController.tvshow_list);
 
 
 /// GENRE ROUTES ///
@@ -32,7 +32,7 @@ router.get('/tvshows', tvshowController.tvshow_list);
 router.get('/genre/create', genre_controller.genre_create_get);
 
 // POST request for creating Genre.
-router.post('/genre/create', genre_controller.genre_create_post);
+router.post('/genre/create',ensureAuthenticated,  genre_controller.genre_create_post);
 // GET request for one Genre.
 router.get('/genre/:id', genre_controller.genre_detail);
 
