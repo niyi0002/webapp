@@ -11,6 +11,8 @@ https://glacial-journey-47796.herokuapp.com/catalog
 
 To start with we used express application generator. This helped us with creating a skeleton for our application. In the backend implementation we used node.js as a server. We used Mongoose as our database of choice. Mongoose is a MongoDB object modeling tool and acts as a frontend to MongoDB. In this application MongoDB Atlas is utilized. We managed to populate an amount of data. The data was rendered as HTML to be able to display it to the user. We worked with HTML forms using pug, for example we wrote HTML form to create tv show and genre. We used routes to support forward requests to the suitable controller function. Initially the GET routes is used to display an empty form for creating the tv show and genre, another route which is POST is used to validate the data and saving the information to the database.The functions written in the controllers can get the rquested data from the models. These are followed by creating a HTML page to display the data to the user.
 
+![image](https://user-images.githubusercontent.com/45126152/122805864-eb210000-d2c9-11eb-897f-d81822154aea.png)
+
 ## Software and other
 
 * Visual Studio Code
