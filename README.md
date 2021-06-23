@@ -13,7 +13,7 @@ To start with we used express application generator. This helped us with creatin
 
 The data was rendered as HTML to be able to display it to the user. We worked with HTML forms using pug. We used routes to support forward requests to the suitable controller function. Initially the GET routes is used to display an empty form for creating the tv show and genre, another route which is POST is used to validate the data and saving the information to the database.The functions written in the controllers can get the rquested data from the models. These are followed by creating a HTML page to display the data to the user. User can also sign up and login now to be able to access greater tvshow database. 
 
-Authentication for the user is realized with the help of Passport which is a middleware for node.js.
+Session based authentication for the user is realized with the help of Passport which is a middleware for node.js with a MongoDB Atlas backend. It uses cookies and has the node application and database working together to track the users session state. Another middleware used is express session to help to save session cookies. 
 
 
 ![image](https://user-images.githubusercontent.com/45126152/122805864-eb210000-d2c9-11eb-897f-d81822154aea.png)
