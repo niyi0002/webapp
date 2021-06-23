@@ -10,6 +10,7 @@ var session = require('express-session');
 var indexRouter = require('./routes/index');
 var catalogRouter = require('./routes/catalog');  //Import routes for "catalog" area of site
 var app = express();
+app.use(cookieParser());
 app.use(session({
   secret : 'secret',
   resave : true,
@@ -41,7 +42,6 @@ app.set('view engine', 'pug');
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/catalog', catalogRouter); 
