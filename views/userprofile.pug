@@ -3,6 +3,8 @@ extends layout
 block content
   
     h1 #{title}
-    h2 #{user}
+    h3 Welcome to our website
+    h5 #{user.name}
+    p Your email: #{user.email}
     li
-       a(href='../../user/logout') Logout
+    a(href='../../user/logout') Logout

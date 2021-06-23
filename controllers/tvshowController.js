@@ -1,9 +1,10 @@
 var TvShow = require('../models/tvshows');
 var Genre = require('../models/genre');
 const { body,validationResult } = require('express-validator');
-
+const fetch = require('node-fetch');
 
 var async = require('async');
+const { func } = require('@hapi/joi');
 
 exports.index = function(req, res) {
 
@@ -19,6 +20,29 @@ exports.index = function(req, res) {
     });
 };
 
+exports.tvshows =  function(req, res ){
+    
+        fetch(`http://api.tvmaze.com/search/shows?q=riverdale`)
+        .then(res => res.json())
+        .then(jsonData => {
+         const showlist =  jsonData.map(element => element.show);
+         
+         res.render('movie', {showlist});
+        })
+        .catch(err => res.send(err))
+    
+    }
+exports.tvshows_search = function(req,res){
+    
+    fetch(`http://api.tvmaze.com/search/shows?q=${req.body.tvshow}`)
+    .then(res => res.json())
+    .then(jsonData => {
+     const showlist =  jsonData.map(element => element.show);
+     
+     res.render('movie', {showlist});
+    })
+    .catch(err => res.send(err))
+}
 // Display list of all tv shows.
 exports.tvshow_list = function(req, res, next) {
 
@@ -137,3 +161,4 @@ exports.tvshow_create_post = [
         }
     }
 ];
+

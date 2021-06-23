@@ -64,7 +64,7 @@ exports.user_login =   (req, res, next) => {
 }
 
 exports.user_profile = async (req, res) => {
- res.render('userprofile' , {title: 'User Profile'});
+ res.render('userprofile' , {title: 'User Profile' ,  user: req.user});
 }
 
 exports.logout = (req,res) => {

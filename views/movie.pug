@@ -1,0 +1,24 @@
+extends layout
+
+block content
+
+  body
+        ul
+          
+          form(method='POST' action='')
+            div.form-group
+             input#tvshow.form-control(type='text', placeholder='Search for a show....' name='tvshow' )
+            button.btn.btn-primary(type='submit') Submit
+          each show in showlist
+            li 
+                #tomb.movie_card
+                    .info_section
+                      .movie_header 
+                          h1 #{show.name}
+                          img.locandina(src= show.image.original)
+                          p #[strong Genres: ] #{show.genres}
+                          p #[strong Schedule: ] #{show.schedule.time} #{show.schedule.days}
+                          p #[strong Status: ] #{show.status} 
+                          p #[strong Rating: ]  #{show.rating.average}
+                          a(href=show.url) Details of the show: #{show.name} 
+                          |
