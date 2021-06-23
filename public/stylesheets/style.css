@@ -14,6 +14,7 @@
 .sidebar-nav a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
+  font-family: fantasy;
   font-size: 25px;
   color:white;
   display: block;
@@ -43,12 +44,12 @@ a{
 html, body{
   margin: 0;
   background: white;
-  font-family: 'Montserrat', helvetica, arial, sans-serif;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
   font-size: 14px;
   font-weight: 400;
 }
 input{
-  font-family: 'Helvetica', serif;
+  font-family:fantasy;
   width: 100%;
   font-size: 20px;
   padding: 12px 20px;
@@ -57,7 +58,7 @@ input{
   border-bottom: 2px solid #767474;
 }
 button[type=submit] {
-  font-family: 'Helvetica', serif;
+  font-family: fantasy;
   width: 50%;
   background-color: #767474;
   border: none;
@@ -75,13 +76,13 @@ button[type=submit] {
 }
 
 label{
-  font-family: 'Montserrat', helvetica, arial, sans-serif;
+  font-family: fantasy;
   font-size: 14px;
 }
 .main{
   padding:50px;
   position: relative;
-  font-family: 'Helvetica', serif;
+  font-family: fantasy;
   overflow: hidden;
   border-radius: 10px;
   transition: all 0.4s;
@@ -91,7 +92,7 @@ label{
 .main h1{
   font-size: 40px;
   text-align:center;
-  font-family: 'Helvetica', serif;
+  font-family: fantasy;
     
 }
 .star-ratings {
