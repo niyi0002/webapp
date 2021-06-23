@@ -43,6 +43,30 @@ exports.tvshows_search = function(req,res){
     })
     .catch(err => res.send(err))
 }
+
+exports.movies =  function(req, res ){
+    
+    fetch(`https://www.omdbapi.com/?t=titanic&apikey=5b82513`)
+    .then(res => res.json())
+    .then(jsonData => {
+     
+     res.render('popularmovies', {jsonData});
+    })
+    .catch(err => res.send(err))
+
+}
+
+exports.movie_search = function(req,res){
+    
+    fetch(`https://www.omdbapi.com/?t=${req.body.movie}&apikey=5b82513`)
+    .then(res => res.json())
+    .then(jsonData => {
+    
+     res.render('popularmovies', {jsonData});
+    })
+    .catch(err => res.send(err))
+}
+
 // Display list of all tv shows.
 exports.tvshow_list = function(req, res, next) {
 

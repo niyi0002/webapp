@@ -1,0 +1,25 @@
+extends layout
+
+block content
+
+  body
+        ul
+        form(method='POST' action='')
+            div.form-group
+             input#tvshow.form-control(type='text', placeholder='Search for a movie....' name='movie' )
+            button.btn.btn-primary(type='submit') Search
+            li 
+                #tomb.movie_card
+                    .info_section
+                      .movie_header 
+                          h1 #{jsonData.Title}
+                          img.locandina(src= jsonData.Poster)
+                          p #[strong Genres: ] #{jsonData.Genre}
+                          p #[strong Director: ] #{jsonData.Director}
+                          p #[strong Year: ] #{jsonData.Year}
+                          p #[strong Actors: ] #{jsonData.Actors}
+                          p #[strong Plot: ] #{jsonData.Plot}
+                          
+                          
+                           
+                          |

@@ -54,5 +54,7 @@ router.get('/user/logout', user_controller.logout);
 
 router.get('/movie', ensureAuthenticated,tvshowController.tvshows);
 router.post('/movie', ensureAuthenticated, tvshowController.tvshows_search);
+router.get('/popularmovie',tvshowController.movies);
+router.post('/popularmovie', tvshowController.movie_search);
 
 module.exports = router;
