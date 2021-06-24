@@ -2,7 +2,7 @@
 # webapp
 
 ## Description
-![image](https://user-images.githubusercontent.com/45197362/123155415-64eef000-d468-11eb-8d52-a450fc74ddf0.png)
+![image](https://user-images.githubusercontent.com/45126152/123175862-cae87100-d482-11eb-8acf-59939959dc35.png)
 The tv show library is a website that users can view the tv shows description. They can search for different genres. Each genre contains one or more shows. Users has the abilitly to add genres and tv shows to the library.
 **Link to our website:**
 https://glacial-journey-47796.herokuapp.com/catalog
