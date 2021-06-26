@@ -18,7 +18,8 @@ html(lang='en')
         div(class='col-sm-2')
           block sidebar
             ul(id = 'mySidebar' , class='sidebar-nav')
-              a.closebtn(href='javascript:void(0)' onclick='closeNav()') &times;
+              li
+                a.closebtn(href='javascript:void(0)' onclick='closeNav()') &times;
               li
                 a(href='/catalog') About
               li

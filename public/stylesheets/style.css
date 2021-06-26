@@ -12,7 +12,7 @@
   left: 0;
   background-color:#010918;
   overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px; /* Place content 60px from the top */
+  padding-top: 100px; /* Place content 60px from the top */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
 .sidebar-nav a {
@@ -136,7 +136,7 @@ label{
   }
     .movie_header{
       position: relative;
-      padding: 10px;
+      padding: 5px;
       height: 40%;
     }
       h1{
@@ -234,4 +234,23 @@ label{
   font-size: 18px;
   padding: 11px;
   border: 1px solid #ddd;
+}
+
+.sidebar-nav .closebtn {
+  
+  font-size: 36px;
+ 
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
 }
