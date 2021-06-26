@@ -15,7 +15,7 @@ block content
                     .info_section
                       .movie_header 
                           h1 #{show.name}
-                          img.locandina(src= show.image.original)
+                          img.locandina(src= show.image.original, style='max-width: 100% ,  height: auto')
                           p #[strong Genres: ] #{show.genres}
                           p #[strong Schedule: ] #{show.schedule.time} #{show.schedule.days}
                           p #[strong Status: ] #{show.status} 
